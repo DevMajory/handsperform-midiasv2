@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Doc: CRM Outreach Pro (Definitivo)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #F8FAFC; 
+            --card: #FFFFFF;
+            --border: #E2E8F0;
+            --primary: #7C3AED; /* Roxo principal */
+            --secondary: #10B981; /* Verde sucesso */
+            --accent: #EF4444; /* Vermelho alerta */
+            --text-main: #1E293B;
+            --text-dim: #64748B;
+        }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text-main); line-height: 1.6; margin: 0; display: flex; }
+        
+        /* Sidebar */
+        .sidebar { width: 280px; background: var(--card); height: 100vh; position: fixed; border-right: 1px solid var(--border); padding: 25px; box-sizing: border-box; overflow-y: auto; }
+        .logo { font-size: 1.3rem; font-weight: 700; color: var(--primary); margin-bottom: 30px; display: flex; align-items: center; gap: 8px; }
+        .nav-group { margin-bottom: 20px; }
+        .nav-title { font-size: 0.65rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; display: block; }
+        .nav-item { padding: 8px 12px; border-radius: 6px; color: var(--text-dim); cursor: pointer; transition: 0.2s; margin-bottom: 4px; font-size: 0.85rem; text-decoration: none; display: block; }
+        .nav-item:hover { background: #F1F5F9; color: var(--primary); }
+
+        /* Content */
+        .content { margin-left: 280px; padding: 50px; max-width: 950px; width: 100%; }
+        .section { background: var(--card); border-radius: 12px; padding: 35px; border: 1px solid var(--border); margin-bottom: 40px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        h1 { font-size: 2.5rem; color: #0F172A; margin: 0 0 10px 0; }
+        h2 { font-size: 1.4rem; color: var(--primary); margin-bottom: 20px; border-bottom: 1px solid #F1F5F9; padding-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+        h3 { font-size: 1.1rem; color: var(--text-main); margin-top: 25px; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; margin: 15px 0; }
+        .card-inner { background: #F1F5F9; padding: 18px; border-radius: 8px; border: 1px solid var(--border); }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.85rem; }
+        th { text-align: left; color: var(--text-dim); padding: 10px; border-bottom: 2px solid var(--border); }
+        td { padding: 10px; border-bottom: 1px solid var(--border); }
+
+        pre { background: #1E293B; padding: 15px; border-radius: 8px; overflow-x: auto; color: #E2E8F0; margin: 10px 0; }
+        code { font-family: 'Fira Code', monospace; font-size: 0.8rem; }
+        .badge { padding: 3px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600; }
+        .badge-purple { background: #EDE9FE; color: var(--primary); }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <div class="logo">🚀 Outreach Pro</div>
+    <div class="nav-group">
+        <span class="nav-title">Estratégia e Visual</span>
+        <a href="#visual" class="nav-item">Identidade Visual (Light)</a>
+        <a href="#ia-icp" class="nav-item">IA: Gerador de ICP</a>
+        <a href="#negocio" class="nav-item">Planos e Limites</a>
+    </div>
+    <div class="nav-group">
+        <span class="nav-title">Configuração Manual</span>
+        <a href="#textos" class="nav-item">Textos e Variáveis</a>
+        <a href="#importacao" class="nav-item">Modelos de CSV</a>
+    </div>
+    <div class="nav-group">
+        <span class="nav-title">Engenharia</span>
+        <a href="#n8n" class="nav-item">Motor n8n (Passo a Passo)</a>
+        <a href="#sql" class="nav-item">Script SQL Supabase</a>
+        <a href="#seguranca" class="nav-item">Criptografia e Dunning</a>
+    </div>
+</div>
+
+<div class="content">
+    <header style="margin-bottom: 50px;">
+        <span class="badge badge-purple">DOCUMENTAÇÃO MASTER CONSOLIDADA v3.0</span>
+        <h1>CRM Outreach Pro</h1>
+        <p style="color: var(--text-dim);">Estratégia via IA, Configuração Humana e Automação n8n.</p>
+    </header>
+
+    <section id="visual" class="section">
+        <h2>1. Identidade Visual (Modelo Claro)</h2>
+        <div class="grid">
+            <div class="card-inner">
+                <h3>Cores</h3>
+                <ul>
+                    <li>Background: <code>#F8FAFC</code></li>
+                    <li>Cards/Sidebar: <code>#FFFFFF</code></li>
+                    <li>Destaque: <code>#7C3AED</code> (Roxo)</li>
+                </ul>
+            </div>
+            <div class="card-inner">
+                <h3>Dashboard UX</h3>
+                <p>Interface Single Page, limpa, com badges coloridos para status de leads e banners de alerta em vermelho para inadimplência.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="ia-icp" class="section">
+        <h2>2. Gerador de ICP (IA)</h2>
+        <p>A IA é utilizada exclusivamente para processar o formulário estratégico do humano.</p>
+        <div class="card-inner" style="border-left: 4px solid var(--secondary);">
+            <p><b>Regra:</b> A IA gera o <b>Ideal Customer Profile (ICP)</b>. Os e-mails da campanha são <b>redigidos manualmente</b> pelo humano.</p>
+        </div>
+    </section>
+
+    <section id="negocio" class="section">
+        <h2>3. Planos e Negócio</h2>
+        <table>
+            <thead>
+                <tr><th>Plano</th><th>Envios/Mês</th><th>SMTP</th><th>Recursos</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><b>Basic</b></td><td>100</td><td>1 conta</td><td>ICP IA, 3 Campanhas, 5 Follow-ups</td></tr>
+                <tr><td><b>Pro</b></td><td>500</td><td>1 conta</td><td>ICP IA, 3 Campanhas, 5 Follow-ups</td></tr>
+                <tr><td><b>Enterprise</b></td><td>1000</td><td>2 contas</td><td>ICP IA, 3 Campanhas, 5 Follow-ups</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="textos" class="section">
+        <h2>4. Textos e Variáveis Dinâmicas</h2>
+        <p>O humano configura os textos das campanhas manualmente. Variáveis aceitas:</p>
+        <ul>
+            <li><code>{{nome}}</code>: Nome do lead</li>
+            <li><code>{{empresa}}</code>: Empresa do lead</li>
+            <li><code>{{cargo}}</code>: Cargo do lead</li>
+        </ul>
+    </section>
+
+    <section id="importacao" class="section">
+        <h2>5. Modelos de Importação CSV</h2>
+        <div class="grid">
+            <div class="card-inner"><b>Modelo 1:</b> <code>nome, cargo, e-mail</code></div>
+            <div class="card-inner"><b>Modelo 2:</b> <code>nome, empresa, cargo, e-mail</code></div>
+            <div class="card-inner"><b>Modelo 3:</b> <code>nome, e-mail</code></div>
+        </div>
+    </section>
+
+    <section id="n8n" class="section">
+        <h2>6. Motor n8n (Passo a Passo)</h2>
+        <p>Fila de envio automatizada com inteligência anti-spam:</p>
+        <ol>
+            <li><b>Trigger:</b> Cron a cada 10 min.</li>
+            <li><b>Filtro:</b> Leads <code>pending</code> + <code>next_send_at <= NOW()</code> + Limite do Plano.</li>
+            <li><b>Horário Comercial:</b> Disparo apenas entre 08:00 e 18:00.</li>
+            <li><b>Random Delay:</b> Nó Wait com expressão JS:
+                <pre><code>const tempos = [120, 300, 480, 720]; 
+return tempos[Math.floor(Math.random() * tempos.length)];</code></pre>
+            </li>
+            <li><b>Envio SMTP:</b> Dados dinâmicos da tabela <code>smtp_credentials</code>.</li>
+            <li><b>Limite:</b> Máximo de 20 e-mails por hora/conta.</li>
+        </ol>
+    </section>
+
+    <section id="sql" class="section">
+        <h2>7. Script SQL Supabase</h2>
+        <pre><code>CREATE TABLE profiles (
+  id UUID REFERENCES auth.users PRIMARY KEY,
+  plan_type TEXT DEFAULT 'basic',
+  emails_sent_this_month INTEGER DEFAULT 0,
+  payment_status TEXT DEFAULT 'active'
+);
+
+CREATE TABLE smtp_credentials (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  user_id UUID REFERENCES profiles(id),
+  smtp_host TEXT, smtp_port INTEGER,
+  smtp_user TEXT, smtp_pass TEXT -- AES-256
+);
+
+CREATE TABLE leads (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  user_id UUID REFERENCES profiles(id),
+  email TEXT NOT NULL,
+  status TEXT DEFAULT 'pending' CHECK (status IN ('pending', 'sent', 'follow_up_1', 'follow_up_2', 'follow_up_3', 'follow_up_4', 'follow_up_5', 'replied', 'paused')),
+  next_send_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);</code></pre>
+    </section>
+
+    <section id="seguranca" class="section">
+        <h2>8. Criptografia e Pagamentos (Dunning)</h2>
+        <div class="grid">
+            <div class="card-inner">
+                <h3>AES-256-GCM</h3>
+                <p>Senhas SMTP criptografadas no Replit com Master Key antes de salvar no Supabase.</p>
+            </div>
+            <div class="card-inner" style="border-left: 4px solid var(--accent);">
+                <h3>Stripe Webhook</h3>
+                <p><code>payment_failed</code>: Pausa motor n8n e ativa banner vermelho de alerta na interface.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; color: var(--text-dim); padding-bottom: 20px;">
+        CRM Outreach Pro &copy; 2025 - Documento Final Consolidado
+    </footer>
+</div>
+
+</body>
+</html>
